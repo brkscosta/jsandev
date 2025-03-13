@@ -1,0 +1,40 @@
+{
+  "HeroHeader_name": "Hi,I'm",
+  "HeroDescription_description": "Roots in Bahia 🇧🇷 • Based in Portugal 🇵🇹",
+  "HeroSubHeader_squence": "Software Engineer",
+  "HeroSubHeader_squence2": "From Bahia to the World",
+  "timeline": [
+    {
+      "date": "2016-2018",
+      "icon": "🎓",
+      "title": "Information Systems",
+      "location": "Polytechnic Institute of Setúbal"
+    },
+    {
+      "date": "2018-2020",
+      "icon": "🎓",
+      "title": "Computer Engineering",
+      "location": "Polytechnic Institute of Setúbal"
+    },
+    {
+      "date": "2021",
+      "icon": "🚗",
+      "title": "Joined Critical TechWorks",
+      "location": "Lisbon, Portugal"
+    },
+    {
+      "date": "2021-2024",
+      "icon": "🚗",
+      "title": "BMW Navigation System",
+      "location": "Lisbon, Portugal",
+      "description": "C++ & Linux development for BMW navigation system."
+    },
+    {
+      "date": "Present",
+      "icon": "🚀",
+      "title": "ID8 and Android Apps",
+      "location": "Lisbon, Portugal",
+      "description": "Started working on Android and TypeScript projects."
+    }
+  ]
+}

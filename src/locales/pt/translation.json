@@ -1,0 +1,40 @@
+{
+  "HeroHeader_name": "Oi, eu sou",
+  "HeroDescription_description": "Baiano 🇧🇷 • Baseado em Portugal 🇵🇹",
+  "HeroSubHeader_squence": "Engenheiro de Software",
+  "HeroSubHeader_squence2": "Da Bahia para o Mundo",
+  "timeline": [
+    {
+      "date": "2016-2018",
+      "icon": "🎓",
+      "title": "Sistemas de Informação",
+      "location": "Instituto Politécnico de Setúbal"
+    },
+    {
+      "date": "2018-2020",
+      "icon": "🎓",
+      "title": "Engenharia Informática",
+      "location": "Instituto Politécnico de Setúbal"
+    },
+    {
+      "date": "2021",
+      "icon": "🚗",
+      "title": "Entrei na Critical TechWorks",
+      "location": "Lisboa, Portugal"
+    },
+    {
+      "date": "2021-2024",
+      "icon": "🚗",
+      "title": "Sistema de Navegação BMW",
+      "location": "Lisboa, Portugal",
+      "description": "Desenvolvi em C++ e Linux para o sistema de navegação da BMW."
+    },
+    {
+      "date": "Atual",
+      "icon": "🚀",
+      "title": "ID8 e Aplicativos Android",
+      "location": "Lisboa, Portugal",
+      "description": "Comecei a trabalhar com Android e TypeScript."
+    }
+  ]
+}
