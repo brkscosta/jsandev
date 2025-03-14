@@ -27,10 +27,12 @@ export type TimelineMarkerProps = {
   description?: string
 }
 
-export type WhatsAppIconProps = {
+type SVGIconProps = {
   className: string
 }
 
-export type InstagramIconProps = {
-  className: string
-}
+export type WhatsAppIconProps = SVGIconProps
+
+export type InstagramIconProps = SVGIconProps
+
+export type GitHubIconProps = SVGIconProps
