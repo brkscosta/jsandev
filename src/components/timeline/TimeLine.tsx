@@ -1,12 +1,12 @@
-import { t } from "i18next";
-import { FC } from "react";
-import { TimelineMarkerProps } from "../../types/Components";
-import { TimelineMarker } from "./TimelineMarker";
+import { TimelineMarkerProps } from '@/types/Components'
+import { t } from 'i18next'
+import { FC } from 'react'
+import { TimelineMarker } from './TimelineMarker'
 
 export const Timeline: FC = () => {
-  const timelineEvents = t("timeline", {
-    returnObjects: true,
-  }) as TimelineMarkerProps[];
+  const timelineEvents = t('timeline', {
+    returnObjects: true
+  }) as TimelineMarkerProps[]
 
   return (
     <div className="flex flex-col md:flex-col md:space-x-4">
@@ -17,5 +17,5 @@ export const Timeline: FC = () => {
           <TimelineMarker key={index} {...event} />
         ))}
     </div>
-  );
-};
+  )
+}

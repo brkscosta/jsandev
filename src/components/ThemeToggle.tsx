@@ -1,16 +1,16 @@
-import { Moon, Sun } from "lucide-react";
-import { motion } from "motion/react";
-import { FC } from "react";
-import { useTheme } from "../hooks/useTheme";
+import { useTheme } from '@/hooks/useTheme'
+import { Moon, Sun } from 'lucide-react'
+import { motion } from 'motion/react'
+import { FC } from 'react'
 
 export const ThemeToggle: FC = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme()
 
   return (
     <motion.button
       whileHover={{
         scale: 1.2,
-        transition: { duration: 0.3 },
+        transition: { duration: 0.3 }
       }}
       whileTap={{ scale: 0.9 }}
       onClick={toggleTheme}
@@ -21,7 +21,7 @@ export const ThemeToggle: FC = () => {
         dark:text-bmw-blue text-bmw-gray-800
       `}
     >
-      {theme === "dark" ? <Sun size={24} /> : <Moon size={24} />}
+      {theme === 'dark' ? <Sun size={24} /> : <Moon size={24} />}
     </motion.button>
-  );
-};
+  )
+}

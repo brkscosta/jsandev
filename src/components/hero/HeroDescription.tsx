@@ -1,10 +1,8 @@
-import { motion } from "motion/react";
-import { ReactElement } from "react";
-import { HeroDescriptionProps } from "../../types/Components";
+import { HeroDescriptionProps } from '@/types/Components'
+import { motion } from 'motion/react'
+import { ReactElement } from 'react'
 
-export const HeroDescription = ({
-  text,
-}: HeroDescriptionProps): ReactElement => {
+export const HeroDescription = ({ text }: HeroDescriptionProps): ReactElement => {
   return (
     <motion.p
       initial={{ opacity: 0 }}
@@ -14,5 +12,5 @@ export const HeroDescription = ({
     >
       {text}
     </motion.p>
-  );
-};
+  )
+}

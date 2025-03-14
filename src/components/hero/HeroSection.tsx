@@ -1,6 +1,6 @@
-import { ReactElement } from "react";
-import { HeroSectionProps } from "../../types/Components";
+import { HeroSectionProps } from '@/types/Components'
+import { ReactElement } from 'react'
 
 export const HeroSection = ({ children }: HeroSectionProps): ReactElement => {
-  return <>{children}</>;
-};
+  return <>{children}</>
+}

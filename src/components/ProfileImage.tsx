@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
-import { FC, useState } from "react";
+import { motion } from 'framer-motion'
+import { FC, useState } from 'react'
 
 export const ProfileImage: FC = () => {
-  const [imageError, setImageError] = useState(false);
+  const [imageError, setImageError] = useState(false)
 
   return (
     <motion.div
@@ -22,8 +22,8 @@ export const ProfileImage: FC = () => {
         <img
           src={
             imageError
-              ? "https://redthread.uoregon.edu/files/original/affd16fd5264cab9197da4cd1a996f820e601ee4.png"
-              : "https://github.com/brkscosta.png"
+              ? 'https://redthread.uoregon.edu/files/original/affd16fd5264cab9197da4cd1a996f820e601ee4.png'
+              : 'https://github.com/brkscosta.png'
           }
           alt="Profile image"
           className="w-full h-full object-cover"
@@ -31,5 +31,5 @@ export const ProfileImage: FC = () => {
         />
       </div>
     </motion.div>
-  );
-};
+  )
+}

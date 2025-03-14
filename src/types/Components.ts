@@ -1,28 +1,36 @@
 export type ThemeProviderProps = {
-  children: React.ReactNode;
-};
+  children: React.ReactNode
+}
 
 export type HeroDescriptionProps = {
-  text: string;
-};
+  text: string
+}
 
 export type HeroHeaderProps = {
-  name: string;
-};
+  name: string
+}
 
 export type HeroSectionProps = {
-  children?: React.ReactNode;
-};
+  children?: React.ReactNode
+}
 
 export type SocialLinksProps = {
-  phoneNo: string;
-  instagram: string;
-};
+  phoneNo: string
+  instagram: string
+}
 
 export type TimelineMarkerProps = {
-  date: string;
-  icon: string;
-  title: string;
-  location: string;
-  description?: string;
-};
+  date: string
+  icon: string
+  title: string
+  location: string
+  description?: string
+}
+
+export type WhatsAppIconProps = {
+  className: string
+}
+
+export type InstagramIconProps = {
+  className: string
+}
