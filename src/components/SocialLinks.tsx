@@ -1,19 +1,20 @@
-import { motion } from "framer-motion";
-import { Instagram, Phone } from "lucide-react";
-import { FC } from "react";
-import { SocialLinksProps } from "../types/Components";
+import { InstagramIcon } from '@/icons/InstagramIcon'
+import { WhatsAppIcon } from '@/icons/WhatsAppIcon'
+import { SocialLinksProps } from '@/types/Components'
+import { motion } from 'framer-motion'
+import { FC } from 'react'
 
 export const SocialLinks: FC<SocialLinksProps> = ({ phoneNo, instagram }) => {
   const handleWhatsAppClick = () => {
     window.open(
       `https://wa.me/${phoneNo}?text=Olá%20Joanã!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar.`,
-      "_blank"
-    );
-  };
+      '_blank'
+    )
+  }
 
   const handleInstagramClick = () => {
-    window.open(`https://instagram.com/${instagram}`, "_blank");
-  };
+    window.open(`https://instagram.com/${instagram}`, '_blank')
+  }
 
   return (
     <motion.div
@@ -25,7 +26,7 @@ export const SocialLinks: FC<SocialLinksProps> = ({ phoneNo, instagram }) => {
       <motion.button
         whileHover={{
           scale: 1.2,
-          transition: { duration: 0.3 },
+          transition: { duration: 0.3 }
         }}
         whileTap={{ scale: 0.9 }}
         onClick={handleWhatsAppClick}
@@ -34,12 +35,12 @@ export const SocialLinks: FC<SocialLinksProps> = ({ phoneNo, instagram }) => {
            transition-all duration-300 shadow-lg`}
         aria-label="WhatsApp"
       >
-        <Phone className="w-6 h-6" />
+        <WhatsAppIcon className="w-6 h-6" />
       </motion.button>
       <motion.button
         whileHover={{
           scale: 1.2,
-          transition: { duration: 0.3 },
+          transition: { duration: 0.3 }
         }}
         whileTap={{ scale: 0.9 }}
         onClick={handleInstagramClick}
@@ -48,8 +49,8 @@ export const SocialLinks: FC<SocialLinksProps> = ({ phoneNo, instagram }) => {
             text-white transform hover:scale-110 transition-all duration-300 shadow-lg`}
         aria-label="Instagram"
       >
-        <Instagram className="w-6 h-6" />
+        <InstagramIcon className="w-6 h-6" />
       </motion.button>
     </motion.div>
-  );
-};
+  )
+}
