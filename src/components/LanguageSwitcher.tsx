@@ -14,22 +14,15 @@ export const LanguageSwitcher: FC = () => {
       <motion.button
         whileHover={{ scale: 1.2 }}
         whileTap={{ scale: 0.9 }}
-        className={`p-2 rounded-full ${
-          i18n.language === "en" ? "bg-blue-500" : "bg-gray-300"
-        }`}
-        onClick={() => changeLanguage("en")}
+        className={`p-2 rounded-full bg-bmw-gray-100 dark:bg-bmw-gray-800 shadow-lg
+           hover:shadow-xl transition-all duration-300`}
+        onClick={() => changeLanguage(i18n.language === "en" ? "pt" : "en")}
       >
-        EN
-      </motion.button>
-      <motion.button
-        whileHover={{ scale: 1.2 }}
-        whileTap={{ scale: 0.9 }}
-        className={`p-2 rounded-full ${
-          i18n.language === "pt" ? "bg-green-500" : "bg-gray-300"
-        }`}
-        onClick={() => changeLanguage("pt")}
-      >
-        PT
+        {i18n.language === "en" ? (
+          <span className="text-2xl">🇧🇷</span>
+        ) : (
+          <span className="text-2xl">🇬🇧</span>
+        )}
       </motion.button>
     </div>
   );

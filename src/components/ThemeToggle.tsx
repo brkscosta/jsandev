@@ -6,11 +6,6 @@ import { useTheme } from "../hooks/useTheme";
 export const ThemeToggle: FC = () => {
   const { theme, toggleTheme } = useTheme();
 
-  const handleToggle = () => {
-    console.log("toggleTheme");
-    toggleTheme();
-  };
-
   return (
     <motion.button
       whileHover={{
@@ -18,7 +13,7 @@ export const ThemeToggle: FC = () => {
         transition: { duration: 0.3 },
       }}
       whileTap={{ scale: 0.9 }}
-      onClick={handleToggle}
+      onClick={toggleTheme}
       className={`
         fixed top-4 right-4 p-2 rounded-full
         bg-bmw-gray-100 dark:bg-bmw-gray-800

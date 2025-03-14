@@ -4,6 +4,7 @@ import { HeroDescription } from "./components/hero/HeroDescription";
 import { HeroHeader } from "./components/hero/HeroHeader";
 import { HeroSection } from "./components/hero/HeroSection";
 import { HeroSubHeader } from "./components/hero/Subheader";
+import { LanguageSwitcher } from "./components/LanguageSwitcher";
 import { ParticlesBackground } from "./components/ParticlesBackground";
 import { ProfileImage } from "./components/ProfileImage";
 import { SocialLinks } from "./components/SocialLinks";
@@ -19,6 +20,7 @@ export const App = (): ReactElement => {
       <ParticlesBackground />
       <section className={`absolute text-center w-full h-full`}>
         <div className="flex flex-col items-center justify-center p-6">
+          <LanguageSwitcher />
           <ThemeToggle />
 
           <HeroSection>
