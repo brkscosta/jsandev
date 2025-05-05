@@ -1,17 +1,14 @@
 import { GitHubIcon } from '@/icons/GitHubIcon'
 import { InstagramIcon } from '@/icons/InstagramIcon'
-import { WhatsAppIcon } from '@/icons/WhatsAppIcon'
 import { cn } from '@/lib/utils' // Import the cn function
 import { SocialLinksProps } from '@/types/Components'
 import { motion } from 'framer-motion'
+import { Mail } from 'lucide-react'
 import { FC } from 'react'
 
-export const SocialLinks: FC<SocialLinksProps> = ({ phoneNo, instagram }) => {
-  const handleWhatsAppClick = () => {
-    window.open(
-      `https://wa.me/${phoneNo}?text=Olá%20Joanã!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar.`,
-      '_blank'
-    )
+export const SocialLinks: FC<SocialLinksProps> = ({ mail: phoneNo, instagram }) => {
+  const handleMailClick = () => {
+    window.open(`mailto:${phoneNo}`, '_self')
   }
 
   const handleInstagramClick = () => {
@@ -24,10 +21,10 @@ export const SocialLinks: FC<SocialLinksProps> = ({ phoneNo, instagram }) => {
 
   const socialButtons = [
     {
-      onClick: handleWhatsAppClick,
-      className: 'bg-green-600 hover:bg-green-700',
-      icon: <WhatsAppIcon className="w-7 h-7" />,
-      label: 'WhatsApp'
+      onClick: handleMailClick,
+      className: 'bg-blue-400 hover:bg-blue-700',
+      icon: <Mail className="w-7 h-7" />,
+      label: 'Mail'
     },
     {
       onClick: handleInstagramClick,

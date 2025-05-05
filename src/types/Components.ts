@@ -15,7 +15,7 @@ export type HeroSectionProps = {
 }
 
 export type SocialLinksProps = {
-  phoneNo: string
+  mail: string
   instagram: string
 }
 

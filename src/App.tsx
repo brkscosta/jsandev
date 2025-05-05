@@ -33,7 +33,7 @@ export const App = (): ReactElement => {
           <Timeline />
         </div>
       </section>
-      <SocialLinks instagram="jsancosta" phoneNo="+351960313828" />
+      <SocialLinks instagram="jsancosta" mail="hello@jsandev.com" />
     </ThemeProvider>
   )
 }
