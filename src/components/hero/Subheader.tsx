@@ -3,11 +3,12 @@ import { useTranslation } from 'react-i18next'
 import { TypeAnimation } from 'react-type-animation'
 
 export const HeroSubHeader = (): ReactElement => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   return (
     <TypeAnimation
       className="text-xl md:text-2xl text-bmw-gray-600 dark:text-bmw-gray-300 mb-6"
+      key={i18n.language}
       repeat={Infinity}
       sequence={[t('HeroSubHeader_squence'), 2000, t('HeroSubHeader_squence2'), 2000]}
       speed={50}
