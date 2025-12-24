@@ -25,6 +25,7 @@ export type TimelineMarkerProps = {
   title: string
   location: string
   description?: string
+  index?: number
 }
 
 type SVGIconProps = {

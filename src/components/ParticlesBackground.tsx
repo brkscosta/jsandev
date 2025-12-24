@@ -1,8 +1,8 @@
-import { useTheme } from '@/hooks/useTheme'
 import { Engine, ISourceOptions, MoveDirection } from '@tsparticles/engine'
 import { initParticlesEngine, Particles } from '@tsparticles/react'
 import { loadSlim } from '@tsparticles/slim'
 import { FC, useEffect, useMemo, useState } from 'react'
+import { useTheme } from '@/hooks/useTheme'
 
 export const ParticlesBackground: FC = () => {
   const { theme } = useTheme()
@@ -26,76 +26,76 @@ export const ParticlesBackground: FC = () => {
     () => ({
       background: {
         color: {
-          value: theme === 'dark' ? '#000000' : '#F5F5F5'
-        }
+          value: theme === 'dark' ? '#000000' : '#F5F5F5',
+        },
       },
       fpsLimit: 120,
       interactivity: {
         events: {
           onClick: {
             enable: false,
-            mode: 'push'
+            mode: 'push',
           },
           onHover: {
             enable: true,
-            mode: 'repulse'
-          }
+            mode: 'repulse',
+          },
         },
         modes: {
           push: {
-            quantity: 4
+            quantity: 4,
           },
           repulse: {
             distance: 200,
-            duration: 0.4
-          }
-        }
+            duration: 0.4,
+          },
+        },
       },
       particles: {
         color: {
-          value: theme === 'dark' ? '#0066B3' : '#9CA3AF'
+          value: theme === 'dark' ? '#0066B3' : '#9CA3AF',
         },
         links: {
           color: theme === 'dark' ? '#0066B3' : '#9CA3AF',
           distance: 150,
           enable: true,
           opacity: 0.5,
-          width: 1
+          width: 1,
         },
         move: {
           direction: MoveDirection.none,
           enable: true,
           outModes: {
-            default: 'bounce'
+            default: 'bounce',
           },
           random: false,
           speed: 2,
-          straight: false
+          straight: false,
         },
         number: {
           density: {
             enable: true,
-            value_area: 800
+            value_area: 800,
           },
-          value: 100
+          value: 100,
         },
         opacity: {
-          value: 0.5
+          value: 0.5,
         },
         shape: {
-          type: 'circle'
+          type: 'circle',
         },
         size: {
-          value: { min: 1, max: 5 }
-        }
+          value: { min: 1, max: 5 },
+        },
       },
-      detectRetina: true
+      detectRetina: true,
     }),
-    [theme]
+    [theme],
   )
 
   if (!init) {
-    return <></>
+    return null
   }
 
   return <Particles options={options} />

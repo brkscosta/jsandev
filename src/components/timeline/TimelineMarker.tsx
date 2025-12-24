@@ -1,33 +1,58 @@
-import { TimelineMarkerProps } from '@/types/Components'
-import { motion, useInView } from 'framer-motion'
+import { motion, useInView } from 'motion/react'
 import React, { FC } from 'react'
+import { cn } from '@/lib/utils'
+import { TimelineMarkerProps } from '@/types/Components'
 
-export const TimelineMarker: FC<TimelineMarkerProps> = ({ date, icon, title, location, description }) => {
+export const TimelineMarker: FC<TimelineMarkerProps> = ({
+  date,
+  icon,
+  title,
+  location,
+  description,
+  index = 0,
+}: TimelineMarkerProps) => {
   const ref = React.useRef(null)
-  const isInView = useInView(ref, { once: true })
-
-  const variants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 }
-  }
+  const isInView = useInView(ref, { once: true, margin: '-50px' })
+  const isEven = index % 2 === 0
 
   return (
     <motion.div
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      className={cn('flex flex-col md:flex-row items-center w-full mb-8 relative', isEven ? 'md:flex-row-reverse' : '')}
+      initial={{ opacity: 0, y: 50 }}
       ref={ref}
-      initial="hidden"
-      animate={isInView ? 'visible' : 'hidden'}
-      variants={variants}
-      transition={{ duration: 0.5, delay: 0.2 }}
-      className="mb-8 flex items-center w-full"
+      transition={{ duration: 0.6, ease: 'easeOut' }}
     >
-      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 text-white text-2xl mr-4">
-        {icon}
+      {/* Spacer for desktop alignment */}
+      <div className="hidden md:block w-1/2" />
+
+      {/* Center Line Dot */}
+      <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 border-4 border-bmw-blue shadow-lg z-10">
+        <span aria-label="icon" className="text-xl" role="img">
+          {icon}
+        </span>
       </div>
-      <div className="flex-1 p-4 to-bmw-gray-300 dark:bg-gray-800 rounded-lg shadow-lg">
-        <h3 className="text-lg font-semibold text-bmw-gray-900 dark:text-gray-200">{title}</h3>
-        <span className="text-sm text-bmw-gray-700 dark:text-bmw-gray-400">{date}</span>
-        <span className="block text-sm text-bmw-gray-700 dark:text-bmw-gray-400">{location}</span>
-        {description ?? <p className="mt-2 text-bmw-gray-700 dark:text-bmw-gray-400">{description}</p>}
+
+      {/* Content Card */}
+      <div className={cn('w-full md:w-1/2 pl-16 md:pl-0', isEven ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left')}>
+        <motion.div
+          className="glass-panel p-6 rounded-2xl relative overflow-hidden group border-l-4 border-bmw-blue"
+          whileHover={{ scale: 1.02 }}
+        >
+          {/* Decorative gradient blob */}
+          <div className="absolute -top-10 -right-10 w-32 h-32 bg-bmw-blue/10 rounded-full blur-2xl group-hover:bg-bmw-blue/20 transition-colors" />
+
+          <div className={cn('relative z-10 flex flex-col', isEven ? 'md:items-end' : 'md:items-start')}>
+            <span className="inline-block px-3 py-1 mb-2 text-xs font-bold tracking-wider text-white bg-bmw-blue rounded-full shadow-md">
+              {date}
+            </span>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">{title}</h3>
+            <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-2 flex items-center gap-1">
+              {location}
+            </p>
+            {description && <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{description}</p>}
+          </div>
+        </motion.div>
       </div>
     </motion.div>
   )

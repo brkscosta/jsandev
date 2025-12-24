@@ -25,6 +25,7 @@ export default {
       animation: {
         gradient: "gradient 8s linear infinite",
         float: "float 6s ease-in-out infinite",
+        "spin-slow": "spin 8s linear infinite",
       },
       keyframes: {
         gradient: {

@@ -18,21 +18,29 @@ export const App = (): ReactElement => {
   return (
     <ThemeProvider>
       <ParticlesBackground />
-      <section className="absolute text-center w-full h-full">
-        <div className="flex flex-col items-center justify-center p-6">
+
+      <div className="relative min-h-screen w-full flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8 z-10">
+        <header className="absolute top-6 right-6 flex gap-3 z-50">
           <LanguageSwitcher />
           <ThemeToggle />
+        </header>
 
+        <main className="w-full max-w-4xl glass-panel rounded-3xl p-8 sm:p-12 md:p-16 mt-8 mb-20">
           <HeroSection>
             <ProfileImage />
-            <HeroHeader name="Joanã Costa" />
-            <HeroSubHeader />
-            <HeroDescription text={t('HeroDescription_description')} />
+            <div className="space-y-4 mb-12">
+              <HeroHeader name="Joanã Costa" />
+              <HeroSubHeader />
+              <HeroDescription text={t('HeroDescription_description')} />
+            </div>
           </HeroSection>
 
-          <Timeline />
-        </div>
-      </section>
+          <div className="mt-16">
+            <Timeline />
+          </div>
+        </main>
+      </div>
+
       <SocialLinks instagram="jsancosta" mail="hello@jsandev.com" />
     </ThemeProvider>
   )

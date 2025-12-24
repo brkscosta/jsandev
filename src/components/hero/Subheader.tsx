@@ -7,11 +7,11 @@ export const HeroSubHeader = (): ReactElement => {
 
   return (
     <TypeAnimation
-      sequence={[t('HeroSubHeader_squence'), 2000, t('HeroSubHeader_squence2'), 2000]}
-      wrapper="h2"
-      speed={50}
-      repeat={Infinity}
       className="text-xl md:text-2xl text-bmw-gray-600 dark:text-bmw-gray-300 mb-6"
+      repeat={Infinity}
+      sequence={[t('HeroSubHeader_squence'), 2000, t('HeroSubHeader_squence2'), 2000]}
+      speed={50}
+      wrapper="h2"
     />
   )
 }

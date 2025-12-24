@@ -5,11 +5,11 @@ import { initReactI18next } from 'react-i18next'
 
 const resources = {
   en: {
-    translation: translationEN
+    translation: translationEN,
   },
   pt: {
-    translation: translationPT
-  }
+    translation: translationPT,
+  },
 }
 
 i18n.use(initReactI18next).init({
@@ -17,8 +17,8 @@ i18n.use(initReactI18next).init({
   lng: 'en',
   fallbackLng: 'pt',
   interpolation: {
-    escapeValue: false
-  }
+    escapeValue: false,
+  },
 })
 
 export default i18n

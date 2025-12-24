@@ -1,5 +1,5 @@
 {
-  "HeroHeader_name": "Oi, eu sou",
+  "HeroHeader_name": "Oi, me chamo",
   "HeroDescription_description": "Baiano 🇧🇷 •📍Atualmente em Portugal 🇵🇹",
   "HeroSubHeader_squence": "Engenheiro de Software",
   "HeroSubHeader_squence2": "Da Bahia para o Mundo",
@@ -27,7 +27,7 @@
       "icon": "🚗",
       "title": "Sistema de Navegação BMW",
       "location": "Lisboa, Portugal",
-      "description": "Desenvolvi em C++ e Linux para o sistema de navegação da BMW."
+      "description": "Atuei no desenvolvimento do sistema de navegação da BMW utilizando C++ em ambiente Linux."
     },
     {
       "date": "Atual",
